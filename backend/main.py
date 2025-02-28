@@ -24,7 +24,7 @@ app = FastAPI(lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],  # 允许的前端地址
+    allow_origins=["http://localhost:8080","http://127.0.0.1:8080"],  # 允许的前端地址
     allow_credentials=True,                  # 是否允许携带 Cookie
     allow_methods=["*"],                     # 允许的 HTTP 方法
     allow_headers=["*"],                     # 允许的请求头
@@ -72,6 +72,7 @@ def predict():
 
         # 使用加载的模型进行预测
         prediction = knn_model.predict(input_data)
+        print(prediction)
 
         # 返回预测结果
         return {"message": "success", "prediction": prediction.tolist()}

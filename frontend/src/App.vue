@@ -67,7 +67,7 @@ export default {
     async fetchPrediction() {
       try {
       // 向后端发送 GET 请求，无需传递参数
-        const response = await axios.get('http://localhost:8000/test');
+        const response = await axios.get('http://localhost:8000/predict');
       // const response = api.getContent({...})
         console.log('请求成功:', response.data);
       // 更新结果
@@ -115,13 +115,15 @@ body, html {
 /* 新增布局样式 */
 .background-container {
   /* 保持原有背景设置 */
-  background-image: url('./assets/background.png');
-  background-size: cover;
-  background-position: center;
+  /*background-image: url('./assets/background.png');*/
+  background-color: #ffffff;
+  /*background-size: cover;*/
+  /*background-position: center;*/
   height: 100%;
   display: flex;
   flex-direction: row; /* 改为横向布局 */
 }
+
 .left-panel {
   flex: 1; /* 占据左侧50%空间 */
   padding: 40px;
@@ -136,15 +138,16 @@ body, html {
   align-items: center;
   justify-content: center;
 }
+
 .system-title {
-  font-size: 2.5em;
-  color: #ffffff;
+  font-size: 3em;
+  color: #000000FF;
   text-align: center;
   margin-bottom: 20px;
 }
 .system-description {
-  font-size: 1.2em;
-  color: #e0e0e0;
+  font-size: 2em;
+  color: #000000FF;
   text-align: center;
   line-height: 1.6;
 }
@@ -152,12 +155,12 @@ body, html {
   text-align: center;
 }
 .prediction-text {
-  font-size: 2em;
-  color: #0ae736;
+  font-size: 4em;
+  color: #000000FF;
   margin-bottom: 20px;
 }
 .prediction-image {
-  width: 300px;
+  width: 600px;
   height: auto;
 }
 </style>
