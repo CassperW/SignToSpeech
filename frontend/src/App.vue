@@ -4,10 +4,9 @@
     <div class="background-container">
       <!-- 左侧内容 -->
       <div class="left-panel">
-        <h1 class="system-title">Intelligent Sign Language Recognition System</h1>
+        <h1 class="system-title">Smart Sign Language Translation System</h1>
         <p class="system-description">
-          This system collects hand movement data through a high-performance pyroelectric sensor and then conducts recognition through artificial intelligence.
-          Compared with traditional methods, this method can collect dynamic movement data and achieve more accurate continuous sentence recognition.
+          This system achieves a real-time, contactless and robust "sign-to-speech" functionality, by integrating a high-performance polymer-based pyroelectric sensor array and artificial intelligence. It distinguishes multiple words, phrases and continuous sentences, similar signs with identical hand gestures but different body expressions, and operates reliably in both bright and dark conditions.
         </p>
       </div>
       <!-- 右侧内容 -->
@@ -29,27 +28,47 @@ export default {
     return {
       currentMapping: null, // 存储后端返回的预测结果
       mappings: {
-        7: {
-          text: "What",
-          image: require("./assets/pictures/what.png"),
-          sound: require("./assets/sounds/what.mp3"),
+        // 7: {
+        //   text: "What",
+        //   image: require("./assets/pictures/what.png"),
+        //   sound: require("./assets/sounds/what.mp3"),
+        // },
+        // 8: {
+        //   text: "Can",
+        //   image: require("./assets/pictures/can.png"),
+        //   sound: require("./assets/sounds/can.mp3"),
+        // },
+        // 9: {
+        //   text: "We",
+        //   image: require("./assets/pictures/we.png"),
+        //   sound: require("./assets/sounds/we.mp3"),
+        // },
+        // 10: {
+        //   text: "Help",
+        //   image: require("./assets/pictures/help.png"),
+        //   sound: require("./assets/sounds/help.mp3"),
+        // },
+        // 11: {
+        //   text: "You",
+        //   image: require("./assets/pictures/you.png"),
+        //   sound: require("./assets/sounds/you.mp3"),
+        // },
+        0: {
+          text: "Know",
+          image: require("./assets/pictures/know.png"),
+          sound: require("./assets/sounds/know.mp3"),
         },
-        8: {
-          text: "Can",
-          image: require("./assets/pictures/can.png"),
-          sound: require("./assets/sounds/can.mp3"),
+        1: {
+          text: "Don't Know",
+          image: require("./assets/pictures/dontknow.png"),
+          sound: require("./assets/sounds/dontknow.mp3"),
         },
-        9: {
-          text: "We",
-          image: require("./assets/pictures/we.png"),
-          sound: require("./assets/sounds/we.mp3"),
+        2: {
+          text: "I",
+          image: require("./assets/pictures/I.png"),
+          sound: require("./assets/sounds/I.mp3"),
         },
-        10: {
-          text: "Help",
-          image: require("./assets/pictures/help.png"),
-          sound: require("./assets/sounds/help.mp3"),
-        },
-        11: {
+        3: {
           text: "You",
           image: require("./assets/pictures/you.png"),
           sound: require("./assets/sounds/you.mp3"),
@@ -144,12 +163,14 @@ body, html {
   color: #000000FF;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 .system-description {
   font-size: 2em;
   color: #000000FF;
   text-align: center;
   line-height: 1.6;
+  font-weight: bold;
 }
 .prediction-container {
   text-align: center;
