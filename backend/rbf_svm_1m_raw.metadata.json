@@ -1,0 +1,54 @@
+{
+  "model_type": "RBF-SVM",
+  "input": "1025 raw board sensor values",
+  "raw_feature_count": 1025,
+  "standard_scaler": false,
+  "classes": [
+    "Can",
+    "DontKnow",
+    "Goodbye",
+    "Help",
+    "How",
+    "I",
+    "Know",
+    "No",
+    "Please",
+    "Sorry",
+    "Thank you",
+    "What",
+    "Yes",
+    "You"
+  ],
+  "best_parameters": {
+    "C": 30,
+    "gamma": "scale"
+  },
+  "block_cv_scores": [
+    0.9892857142857142,
+    0.9892857142857141,
+    0.9857142857142857,
+    0.9892857142857142,
+    0.9392857142857142
+  ],
+  "block_cv_mean_balanced_accuracy": 0.9785714285714284,
+  "source_files": [
+    "Can.xlsx",
+    "DontKnow.xlsx",
+    "Goodbye.xlsx",
+    "Help.xlsx",
+    "How.xlsx",
+    "I.xlsx",
+    "Know.xlsx",
+    "No.xlsx",
+    "Please.xlsx",
+    "Sorry.xlsx",
+    "Thank you.xlsx",
+    "What.xlsx",
+    "Yes.xlsx",
+    "You.xlsx"
+  ],
+  "sample_count": 1400,
+  "trained_at_utc": "2026-08-18T02:57:17.085495+00:00",
+  "sklearn_version": "1.6.1",
+  "validation_note": "Row-block validation uses the current collection only; validate on a new collection session before treating this score as field accuracy."
+}
