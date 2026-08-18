@@ -7,3 +7,5 @@ __pycache__/
 
 # 忽略 .git 文件夹
 .git/
+
+.venv
